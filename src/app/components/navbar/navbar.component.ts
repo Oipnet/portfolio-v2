@@ -17,5 +17,4 @@ export class NavbarComponent implements OnInit {
       this.items = navItem;
     });
   }
-
 }
