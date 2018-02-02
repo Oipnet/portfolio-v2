@@ -1,1 +1,2 @@
-<a [href]="item.href" class="item homepage" data-anchor=''>{{ item.name }}</a>
+<a [routerLink]="item.href" class="item" *ngIf="!isAnchor">{{ item.name }}</a>
+<a scrollTo [href]="item.href" class="item" *ngIf="isAnchor">{{ item.name }}</a>

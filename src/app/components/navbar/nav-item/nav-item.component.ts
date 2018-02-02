@@ -14,4 +14,8 @@ export class NavItemComponent implements OnInit {
   ngOnInit() {
   }
 
+  public get isAnchor(): boolean{
+      return this.item.href.substring(0,1) === '#';
+  }
+
 }
