@@ -8,7 +8,7 @@ import { NavItem } from '../../interfaces/nav-item.interface';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-  private items: NavItem[];
+  public items: NavItem[];
 
   constructor(private portfolioService: PortfolioService) { }
 

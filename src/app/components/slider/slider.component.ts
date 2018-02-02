@@ -9,7 +9,7 @@ import { Slide as ISlide } from '../../interfaces/slide.interface';
 })
 export class SliderComponent implements OnInit {
   @Input() slides: Array<string>
-  private isLoaded: boolean = false;
+  public isLoaded: boolean = false;
 
   constructor(private portfolioService: PortfolioService) { }
 
