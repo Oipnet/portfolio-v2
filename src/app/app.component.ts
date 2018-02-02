@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
-import { PortfolioService } from './Services/portfolio.service';
-import { Meta as IMeta } from './Interfaces/meta.interface';
+import { PortfolioService } from './services/portfolio.service';
+import { Meta as IMeta } from './interfaces/meta.interface';
+import { Slide as ISlide } from './interfaces/slide.interface';
+import { NavItem as INavItem } from './interfaces/nav-item.interface';
 import { Meta } from '@angular/platform-browser';
 
 @Component({
@@ -10,6 +12,7 @@ import { Meta } from '@angular/platform-browser';
 })
 export class AppComponent {
   title = 'app';
+  slides: Array<ISlide>;
 
   constructor(private metaService: Meta, private portfolioService: PortfolioService) {
     this.portfolioService.getMetas().subscribe((metas: IMeta[]) => {
@@ -18,6 +21,10 @@ export class AppComponent {
           { name: meta.title, content: meta.value }
         ]);
       });
+    });
+
+    this.portfolioService.getSlider().subscribe((slides: ISlide[]) => {
+      this.slides = slides;
     });
   }
 }

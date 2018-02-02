@@ -1,0 +1,10 @@
+<div class="slider_loader" *ngIf=!isLoaded>
+    <figure>
+        <img src="assets/loader.svg" alt="Chargement...">
+    </figure>
+</div>
+<div class="slider" *ngIf=isLoaded>
+    <figure class="slider_items" >
+        <app-slide *ngFor="let slide of slides" [slide]=slide></app-slide>
+    </figure>
+</div>

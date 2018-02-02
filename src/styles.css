@@ -1,1 +1,89 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+html, body, figure, h1, h2, h3, p, fieldset {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+body {
+    line-height: 1;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: 800px;
+    margin: auto;
+}
+
+h1 {
+    margin: 15px 0;
+    font-size: 1.8rem;
+}
+
+h2 {
+    position: relative;
+    text-align: center;
+    font-size: 1.5rem;
+    height: 60px;
+    line-height: 60px;
+    display: block;
+    text-transform: uppercase;
+    color: #0066CC;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-bottom: 2px solid #0000CC; 
+}
+
+h2::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: #0066CC;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    z-index: 2;
+    transform: translateX(-50%) translateY(50%);
+}
+
+h3 {
+    font-size: 1.2rem;
+    height: 40px;
+    line-height: 40px;
+}
+
+section {
+    margin: 10px 0;
+}
+
+header {
+    padding-top: 60px;
+}
+
+section:target {
+    padding-top: 60px;
+}

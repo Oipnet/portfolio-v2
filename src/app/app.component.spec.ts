@@ -1,21 +1,29 @@
 import { TestBed, async, inject } from '@angular/core/testing';
 import { AppComponent } from './app.component';
-import { PortfolioService } from './Services/portfolio.service';
+import { PortfolioService } from './services/portfolio.service';
 import { Observable } from 'rxjs/Observable';
-import { Meta as IMeta } from './Interfaces/meta.interface';
+import { Meta as IMeta } from './interfaces/meta.interface';
 import 'rxjs/add/observable/of';
+import { SliderComponent } from './components/slider/slider.component';
 
 describe('AppComponent', () => {
   const portfolioServiceStub = {
     getMetas: () => {
       return Observable.of([{title: 'meta_1', value: 'meta'}]);
+    },
+    getSlider: () => {
+      return Observable.of([
+        { src: '/src/img1', alt: 'img 1' },
+        { src: '/src/img2', alt: 'img 2' },
+      ]);
     }
   };
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
-        AppComponent
+        AppComponent,
+        SliderComponent
       ],
       providers: [
         { provide: PortfolioService, useValue: portfolioServiceStub }
@@ -32,10 +40,10 @@ describe('AppComponent', () => {
     const app = fixture.debugElement.componentInstance;
     expect(app.title).toEqual('app');
   }));
-  it('should render title in a h1 tag', async(() => {
+  it('should render header tag', async(() => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to app!');
+    expect(compiled.querySelector('header').tagName).toBe('HEADER');
   }));
 });
