@@ -10,11 +10,11 @@ import { ServiceItem as IService } from '../../interfaces/service-item.interface
 export class ServicesComponent implements OnInit {
 
   public services: IService[];
-  
+
   constructor(private portfolioService: PortfolioService) { }
 
   ngOnInit() {
-      this.portfolioService.getServices().subscribe((services: IService[] ) {
+      this.portfolioService.getServices().subscribe((services: IService[] ) => {
           this.services = services;
       });
   }
