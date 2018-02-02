@@ -25,12 +25,12 @@ class Navbar
     private $id;
 
     /**
-     * @ORM\Column(type="text", length=150)
+     * @ORM\Column(type="string", length=150)
      */
     private $name;
 
     /**
-     * @ORM\Column(type="text", length=150)
+     * @ORM\Column(type="string", length=150)
      */
     private $href;
 

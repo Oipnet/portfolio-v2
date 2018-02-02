@@ -9,6 +9,8 @@ import { SliderComponent } from './components/slider/slider.component';
 import { SlideComponent } from './components/slider/slide/slide.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { NavItemComponent } from './components/navbar/nav-item/nav-item.component';
+import { ServicesComponent } from './components/services/services.component';
+import { ServiceItemComponent } from './components/services/service-item/service-item.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { NavItemComponent } from './components/navbar/nav-item/nav-item.componen
     SliderComponent,
     SlideComponent,
     NavbarComponent,
-    NavItemComponent
+    NavItemComponent,
+    ServicesComponent,
+    ServiceItemComponent
   ],
   imports: [
     BrowserModule, HttpModule

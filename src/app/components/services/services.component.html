@@ -1,0 +1,14 @@
+<section id="services">
+    <h2>Services</h2>
+    <p class="services_summary">Je développe pour vous une solution sur mesure adaptée à vos besoin</p>
+    <div class="services_detail">
+        <figure class="services_detail_image">
+            <img src="assets/img/services.png" alt="">
+        </figure>
+        <div class="services_detail_items">
+            <section class="services_detail_items_item">
+                <app-service-item *ngFor="let service of services" [service]="service"></app-service-item>
+            </section>
+        </div>
+    </div>
+</section>

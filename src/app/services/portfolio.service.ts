@@ -7,6 +7,7 @@ import { environment } from '../../environments/environment';
 import { Meta } from '../interfaces/meta.interface';
 import { Slide } from '../interfaces/slide.interface';
 import { NavItem } from '../interfaces/nav-item.interface';
+import { ServiceItem } from '../interfaces/service-item.interface';
 
 import 'rxjs/add/operator/map';
 
@@ -34,6 +35,13 @@ export class PortfolioService {
 
   getNavbar(): Observable<Array<NavItem>> {
     return this.http.get(`${environment.apiUrl}/navbars`)
+    .map(res => {
+      return res.json()['hydra:member']
+    })
+  }
+
+  getServices(): Observable<Array<ServiceItem>> {
+    return this.http.get(`${environment.apiUrl}/services`)
     .map(res => {
       return res.json()['hydra:member']
     })
