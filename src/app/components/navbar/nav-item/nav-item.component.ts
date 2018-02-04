@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, ElementRef } from '@angular/core';
 import { NavItem } from '../../../interfaces/nav-item.interface';
 
 @Component({
@@ -8,14 +8,23 @@ import { NavItem } from '../../../interfaces/nav-item.interface';
 })
 export class NavItemComponent implements OnInit {
   @Input() item: NavItem;
+  @Output() disactiveElement: EventEmitter<any> = new EventEmitter();
+  public active: boolean = false;
 
-  constructor() { }
+  constructor(private elementRef: ElementRef) { }
 
   ngOnInit() {
+    this.disactiveElement.subscribe((element: ElementRef) => {
+      this.active = this.elementRef === element 
+    });
   }
 
   public get isAnchor(): boolean{
       return this.item.href.substring(0,1) === '#';
+  }
+
+  public changeActiveElement() {
+    this.disactiveElement.emit({element: this.elementRef})
   }
 
 }
