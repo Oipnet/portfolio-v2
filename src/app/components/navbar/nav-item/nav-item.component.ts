@@ -15,6 +15,7 @@ export class NavItemComponent implements OnInit {
 
   ngOnInit() {
     this.disactiveElement.subscribe((element: ElementRef) => {
+      console.log(this.elementRef === element);
       this.active = this.elementRef === element 
     });
   }

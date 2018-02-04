@@ -1,3 +1,2 @@
-<a [routerLink]="item.href" class="item" *ngIf="!isAnchor" (click)="changeActiveElement()">{{ item.name }}</a>
-<a scrollTo [href]="item.href" class="item" *ngIf="isAnchor" (click)="changeActiveElement()">{{ item.name }}</a>
-<pre>{{ active }}</pre>
+<a [routerLink]="item.href" class="item" [class.active]="active" *ngIf="!isAnchor" (click)="changeActiveElement()">{{ item.name }}</a>
+<a scrollTo [href]="item.href" class="item" [class.active]="active" *ngIf="isAnchor" (click)="changeActiveElement()">{{ item.name }}</a>
