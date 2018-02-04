@@ -7,6 +7,7 @@ import { AgmCoreModule } from '@agm/core';
 import { route } from './app.routing';
 
 import { PortfolioService } from './services/portfolio.service';
+import { NavbarService } from './services/navbar.service';
 import { AppComponent } from './app.component';
 import { HomepageComponent } from './components/homepage.component';
 import { SliderComponent } from './components/slider/slider.component';
@@ -42,7 +43,7 @@ import { MapComponent } from './components/map/map.component';
     })
   ],
   providers: [
-    PortfolioService
+    PortfolioService, NavbarService
   ],
   bootstrap: [AppComponent]
 })

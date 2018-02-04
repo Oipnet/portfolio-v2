@@ -1,6 +1,8 @@
 import { Component, OnInit, Input, Output, EventEmitter, ElementRef } from '@angular/core';
 import { NavItem } from '../../../interfaces/nav-item.interface';
 
+import { NavbarService } from '../../../services/navbar.service'
+
 @Component({
   selector: 'app-nav-item',
   templateUrl: './nav-item.component.html',
@@ -8,14 +10,15 @@ import { NavItem } from '../../../interfaces/nav-item.interface';
 })
 export class NavItemComponent implements OnInit {
   @Input() item: NavItem;
-  @Output() disactiveElement: EventEmitter<any> = new EventEmitter();
+  
   public active: boolean = false;
 
-  constructor(private elementRef: ElementRef) { }
+  constructor(private elementRef: ElementRef, private navbarService: NavbarService) { 
+  }
 
   ngOnInit() {
-    this.disactiveElement.subscribe((element: ElementRef) => {
-      console.log(this.elementRef === element);
+    this.navbarService.disactiveElement.subscribe((element: ElementRef) => {
+      console.log(this.elementRef === element)
       this.active = this.elementRef === element 
     });
   }
@@ -24,8 +27,7 @@ export class NavItemComponent implements OnInit {
       return this.item.href.substring(0,1) === '#';
   }
 
-  public changeActiveElement() {
-    this.disactiveElement.emit({element: this.elementRef})
+  public fireClickElement() {
+    this.navbarService.manageActiveElement(this.elementRef);
   }
-
 }

@@ -1,2 +1,13 @@
-<a [routerLink]="item.href" class="item" [class.active]="active" *ngIf="!isAnchor" (click)="changeActiveElement()">{{ item.name }}</a>
-<a scrollTo [href]="item.href" class="item" [class.active]="active" *ngIf="isAnchor" (click)="changeActiveElement()">{{ item.name }}</a>
+<a [routerLink]="item.href" 
+    class="item" 
+    [class.active]="active" 
+    *ngIf="!isAnchor" 
+    (click)="fireClickElement()"
+>{{ item.name }}</a>
+<a scrollTo 
+    [href]="item.href"
+    class="item" 
+    [class.active]="active" 
+    *ngIf="isAnchor" 
+    (click)="fireClickElement()"
+>{{ item.name }}</a>
