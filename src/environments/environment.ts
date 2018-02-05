@@ -5,6 +5,6 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'http://api.oipnet.info/api',
+  apiUrl: 'http://localhost:9000/api',
   backEndUrl: 'http://api.oipnet.info/api'
 };

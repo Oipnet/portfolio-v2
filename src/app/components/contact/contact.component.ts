@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Message } from '../../interfaces/message.interface';
+import { PortfolioService } from '../../services/portfolio.service';
 
 @Component({
   selector: 'app-contact',
@@ -8,10 +9,24 @@ import { Message } from '../../interfaces/message.interface';
 })
 export class ContactComponent implements OnInit {
 
-  public message: Message;
-  constructor() { }
+  public message: Message = {
+    sender: '',
+    subject: '',
+    message: ''
+  };
+
+  constructor(private portfolioService: PortfolioService) { }
 
   ngOnInit() {
+
+  }
+
+  public sendMessage(event) {
+    event.preventDefault();
+    
+    this.portfolioService.sendMessage(this.message).subscribe((message: Message) => {
+      console.log('message sended');
+    });
   }
 
 }

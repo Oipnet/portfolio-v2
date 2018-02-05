@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule }   from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
 import { ScrollToModule } from 'ng2-scroll-to';
@@ -42,7 +43,8 @@ import { ContactComponent } from './components/contact/contact.component';
     ),
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyAh34dO5ObROaXXJl1lacdQGawGWEZUuyw'
-    })
+    }),
+    FormsModule
   ],
   providers: [
     PortfolioService, NavbarService

@@ -49,7 +49,8 @@ export class PortfolioService {
   }
 
   sendMessage(message: Message): Observable<Message> {
-    return this.http.post(`${environment.apiUrl}/contact`, message)
+    console.log('message');
+    return this.http.post(`${environment.apiUrl}/contacts`, message)
     .map(res => {
       return res.json()['hydra:member'];
     });

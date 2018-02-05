@@ -1,5 +1,5 @@
 export interface Message {
-    sencer: string;
+    sender: string;
     subject: string;
     message: string;
 }
