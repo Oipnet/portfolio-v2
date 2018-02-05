@@ -1,0 +1,46 @@
+.item {
+    width: 25%;
+    position: relative;
+    overflow: hidden;
+    margin: 15px;
+}
+
+.item img {
+    width: 100%;
+}
+
+.item_caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #0099CC;
+    opacity: 0.8;
+    width: 100%;
+    transform: translateY(120%);
+    transition: 0.5s transform;
+    padding: 10px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.item_caption:before {
+    content: '\f06e';
+    font-family: 'FontAwesome';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    margin-right: 25px;
+    background-color: #0066CC;
+    opacity: 0.8;
+    text-align: center;
+    border-radius: 50%;
+    border: 1px solid #ffffff;
+    transform: translateY(-50%)
+}
+
+.item:hover .item_caption {
+    transform: translateY(0);
+}

@@ -19,6 +19,8 @@ import { ServicesComponent } from './components/services/services.component';
 import { ServiceItemComponent } from './components/services/service-item/service-item.component';
 import { MapComponent } from './components/map/map.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { PortfolioComponent } from './components/portfolio/portfolio.component';
+import { PortfolioItemComponent } from './components/portfolio/portfolio-item/portfolio-item.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,9 @@ import { ContactComponent } from './components/contact/contact.component';
     ServicesComponent,
     ServiceItemComponent,
     MapComponent,
-    ContactComponent
+    ContactComponent,
+    PortfolioComponent,
+    PortfolioItemComponent
   ],
   imports: [
     BrowserModule, 

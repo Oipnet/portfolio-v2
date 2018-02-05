@@ -1,0 +1,17 @@
+#portfolio {
+    background-color: #c0c0c0;
+    padding-bottom: 15px;
+    margin-bottom: 0;
+}
+
+.portfolio_summary {
+    text-align: center;
+    color: #ffffff;
+    margin-top: 15px;
+}
+
+app-portfolio-item {
+    margin: 15px 75px;
+    display: flex;
+    flex-direction: row;
+}

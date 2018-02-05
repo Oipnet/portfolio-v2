@@ -9,6 +9,7 @@ import { Message } from '../interfaces/message.interface';
 import { Slide } from '../interfaces/slide.interface';
 import { NavItem } from '../interfaces/nav-item.interface';
 import { ServiceItem } from '../interfaces/service-item.interface';
+import { ProjectItem } from '../interfaces/project-item.interface';
 
 import 'rxjs/add/operator/map';
 
@@ -43,6 +44,13 @@ export class PortfolioService {
 
   getServices(): Observable<Array<ServiceItem>> {
     return this.http.get(`${environment.apiUrl}/services`)
+    .map(res => {
+      return res.json()['hydra:member'];
+    });
+  }
+
+  getProjects(): Observable<Array<ProjectItem>> {
+    return this.http.get(`${environment.apiUrl}/projects`)
     .map(res => {
       return res.json()['hydra:member'];
     });
