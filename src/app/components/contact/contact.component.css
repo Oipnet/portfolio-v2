@@ -1,0 +1,43 @@
+h2 {
+    text-align: center;
+    width: 100%;
+}
+
+h2::after, h2::before {
+    content: none;
+}
+
+legend {
+    width: 100%;
+    margin: 5px 0;
+}
+
+input, textarea {
+    width: 100%;
+    border: none;
+    border-radius: 2px;
+    color: #a9a9a9;
+    margin: 5px 0;
+    font-weight: 300;
+    font-size: 16px;
+    padding: 0 5px;
+}
+
+input {
+    height: 25px;
+    line-height: 25px;
+}
+
+input[type=button] {
+    background-color: #0066CC;
+    border-radius: 5px;
+    color: #ffffff;
+    line-height: 30px;
+    height: 30px;
+    transition: 0.5s opacity;
+}
+
+input[type=button]:hover {
+    opacity: 0.4;
+    cursor: pointer;
+}

@@ -17,6 +17,7 @@ import { NavItemComponent } from './components/navbar/nav-item/nav-item.componen
 import { ServicesComponent } from './components/services/services.component';
 import { ServiceItemComponent } from './components/services/service-item/service-item.component';
 import { MapComponent } from './components/map/map.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { MapComponent } from './components/map/map.component';
     NavItemComponent,
     ServicesComponent,
     ServiceItemComponent,
-    MapComponent
+    MapComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule, 

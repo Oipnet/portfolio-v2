@@ -1,0 +1,15 @@
+footer {
+    position: relative;
+}
+
+app-contact {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    background-color: #c0c0c0;
+    opacity: 0.8;
+    margin: 15px;
+    border-radius: 5px;
+    padding: 5px;
+}
