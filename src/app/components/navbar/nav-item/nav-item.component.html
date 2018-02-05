@@ -4,10 +4,11 @@
     *ngIf="!isAnchor" 
     (click)="fireClickElement()"
 >{{ item.name }}</a>
-<a scrollTo 
+<a pageScroll 
     [href]="item.href"
     class="item" 
     [class.active]="active" 
     *ngIf="isAnchor" 
     (click)="fireClickElement()"
+    [pageScrollOffset]="60"
 >{{ item.name }}</a>

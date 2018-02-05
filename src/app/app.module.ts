@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule }   from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
-import { ScrollToModule } from 'ng2-scroll-to';
+import {Ng2PageScrollModule} from 'ng2-page-scroll';
 import { AgmCoreModule } from '@agm/core';
 import { route } from './app.routing';
 
@@ -36,7 +36,7 @@ import { ContactComponent } from './components/contact/contact.component';
   imports: [
     BrowserModule, 
     HttpModule,
-    ScrollToModule.forRoot(),
+    Ng2PageScrollModule,
     RouterModule.forRoot(
       route,
       { enableTracing: true }

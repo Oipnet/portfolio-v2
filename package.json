@@ -26,7 +26,7 @@
     "core-js": "^2.4.1",
     "font-awesome": "^4.7.0",
     "ng2-map": "^0.16.5",
-    "ng2-scroll-to": "^1.0.7",
+    "ng2-page-scroll": "^4.0.0-beta.12",
     "roboto-fontface": "^0.8.0",
     "rxjs": "^5.5.2",
     "typeface-rammetto-one": "0.0.54",
