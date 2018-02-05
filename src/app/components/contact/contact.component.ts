@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Message } from '../../interfaces/message.interface';
 
 @Component({
   selector: 'app-contact',
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactComponent implements OnInit {
 
+  public message: Message;
   constructor() { }
 
   ngOnInit() {

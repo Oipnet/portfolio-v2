@@ -8,9 +8,9 @@
           Tel : 07.51.67.32.40
         </address>
       </legend>
-      <input type="email" name="email" id="email" placeholder="E-mail">
-      <input type="text" name="subject" id="subject" placeholder="Sujet">
-      <textarea name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
+      <input type="email" name="sender" id="sender" placeholder="E-mail" [(ngModel)]="message.sender">
+      <input type="text" name="subject" id="subject" placeholder="Sujet" [(ngModel)]="message.subject">
+      <textarea name="message" id="message" cols="30" rows="10" placeholder="Message" [(ngModel)]="message.message"></textarea>
       <input type="button" value="Envoyer">
     </fieldset>
 </form>
