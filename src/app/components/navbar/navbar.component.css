@@ -16,6 +16,9 @@
     line-height: 60px;
     text-align: center;
     font-size: 1.5em;
+}
+
+.navbar_logo a {
     font-family: 'Rammetto One', cursive;
 }
 
