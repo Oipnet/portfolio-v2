@@ -21,14 +21,14 @@ export class PortfolioService {
   constructor(private http: Http) {}
 
   getMetas(): Observable<Array<Meta>> {
-    return this.http.get(`${environment.apiUrl}/metas`)
+    return this.http.get(`${environment.apiUrl}/metas.jsonld`)
       .map(res => {
         return res.json()['hydra:member'];
       });
   }
 
   getSlider(): Observable<Array<Slide>> {
-    return this.http.get(`${environment.apiUrl}/slides`)
+    return this.http.get(`${environment.apiUrl}/slides.jsonld`)
     .map(res => {
       this.sliderIsLoaded.emit(true);
       return res.json()['hydra:member'];
@@ -36,21 +36,21 @@ export class PortfolioService {
   }
 
   getNavbar(): Observable<Array<NavItem>> {
-    return this.http.get(`${environment.apiUrl}/navbars`)
+    return this.http.get(`${environment.apiUrl}/navbars.jsonld`)
     .map(res => {
       return res.json()['hydra:member'];
     });
   }
 
   getServices(): Observable<Array<ServiceItem>> {
-    return this.http.get(`${environment.apiUrl}/services`)
+    return this.http.get(`${environment.apiUrl}/services.jsonld`)
     .map(res => {
       return res.json()['hydra:member'];
     });
   }
 
   getProjects(): Observable<Array<ProjectItem>> {
-    return this.http.get(`${environment.apiUrl}/projects`)
+    return this.http.get(`${environment.apiUrl}/projects.jsonld`)
     .map(res => {
       return res.json()['hydra:member'];
     });
