@@ -8,6 +8,7 @@
 # dependencies
 /node_modules
 /api/vendor
+/admin/node_modules
 
 # IDEs and editors
 /.idea
