@@ -70,14 +70,14 @@
       <file leaf-file-name="Project.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Entity/Project.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
+            <state relative-caret-position="252">
               <caret line="15" column="64" lean-forward="false" selection-start-line="15" selection-start-column="64" selection-end-line="15" selection-end-column="64" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProjectRepository.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ProjectRepository.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Repository/ProjectRepository.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="108">
@@ -89,7 +89,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="project" pinned="false" current-in-tab="false">
+      <file leaf-file-name="project" pinned="false" current-in-tab="true">
         <entry file="das://table:/bc56be94/d7d31f6c-7dce-41ca-8e92-dfd12dcab32f/main.project">
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
             <state>
@@ -302,12 +302,12 @@
       <workItem from="1517567917582" duration="15182000" />
       <workItem from="1517734376546" duration="82000" />
       <workItem from="1517740911652" duration="21000" />
-      <workItem from="1517840461426" duration="4190000" />
+      <workItem from="1517840461426" duration="5412000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19475000" />
+    <option name="totallyTimeSpent" value="20697000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="149" width="1440" height="901" extended-state="6" />
@@ -554,16 +554,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://table:/bc56be94/d7d31f6c-7dce-41ca-8e92-dfd12dcab32f/main.project">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Entity/Project.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
+        <state relative-caret-position="252">
           <caret line="15" column="64" lean-forward="false" selection-start-line="15" selection-start-column="64" selection-end-line="15" selection-end-column="64" />
           <folding />
         </state>
@@ -584,6 +577,13 @@
           <folding>
             <element signature="e#34#57#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/bc56be94/d7d31f6c-7dce-41ca-8e92-dfd12dcab32f/main.project">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
