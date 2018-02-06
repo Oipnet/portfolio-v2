@@ -4,6 +4,8 @@ namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use ApiPlatform\Core\Annotation\ApiResource;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
+use Symfony\Component\HttpFoundation\File\File;
 
 /**
  * @ApiResource(
@@ -14,6 +16,7 @@ use ApiPlatform\Core\Annotation\ApiResource;
  *     }
  * )
  * @ORM\Entity(repositoryClass="App\Repository\ProjectRepository")
+ * @Vich\Uploadable
  */
 class Project
 {
@@ -38,6 +41,18 @@ class Project
      * @ORM\Column(type="text")
      */
     private $description;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     * @var string
+     */
+    private $image;
+
+    /**
+     * @Vich\UploadableField(mapping="project_images", fileNameProperty="image")
+     * @var File
+     */
+    private $imageFile;
 
     /**
      * @return int
@@ -100,4 +115,40 @@ class Project
 
         return $this;
     }
+
+    /**
+     * @return File
+     */
+    public function getImage()
+    {
+        return $this->image;
+    }
+
+    /**
+     * @param mixed $image
+     */
+    public function setImage(File $image): Project
+    {
+        $this->image = $image;
+        return $this;
+    }
+
+    /**
+     * @return File
+     */
+    public function getImageFile(): File
+    {
+        return $this->imageFile;
+    }
+
+    /**
+     * @param File $imageFile
+     */
+    public function setImageFile(File $imageFile): Project
+    {
+        $this->imageFile = $imageFile;
+        return $this;
+    }
+
+
 }

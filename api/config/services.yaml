@@ -3,6 +3,7 @@
 parameters:
     locale: 'en'
     dir.img: '%kernel.project_dir%/%env(resolve:IMG_UPLOAD_DIR)%'
+    app.path.project_images: '/content/img/'
 
 services:
     # default configuration for services in *this* file
