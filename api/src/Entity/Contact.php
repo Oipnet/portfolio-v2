@@ -13,7 +13,7 @@ use ApiPlatform\Core\Annotation\ApiResource;
  *      "post"={"method"="POST", "access_control"="is_granted('IS_AUTHENTICATED_ANONYMOUSLY')"}
  *     }
  * )
- * @ORM\Entity(repositoryClass="App\Repository\SlideRepository")
+ * @ORM\Entity(repositoryClass="App\Repository\ContactRepository")
  */
 class Contact
 {
