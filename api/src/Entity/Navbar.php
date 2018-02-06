@@ -7,7 +7,7 @@ use ApiPlatform\Core\Annotation\ApiResource;
 
 /**
  * @ApiResource(
- *     attributes={"access_control"="is_granted('ROLE_USER')", "order"={"range": "ASC"}},
+ *     attributes={"access_control"="is_granted('ROLE_USER')", "order"={"order": "ASC"}},
  *     collectionOperations={
  *      "get"={"method"="GET", "access_control"="is_granted('IS_AUTHENTICATED_ANONYMOUSLY')"},
  *      "post"={"method"="POST"}
@@ -35,9 +35,9 @@ class Navbar
     private $href;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(name="order_list", type="integer")
      */
-    private $range;
+    private $order;
 
     /**
      * @return int
@@ -88,17 +88,17 @@ class Navbar
     /**
      * @return int
      */
-    public function getRange(): int
+    public function getOrder(): int
     {
-        return $this->range;
+        return $this->order;
     }
 
     /**
      * @param int $order
      */
-    public function setRange(int $order): Navbar
+    public function setOrder(int $order): Navbar
     {
-        $this->range = $order;
+        $this->order = $order;
         return $this;
     }
 }
